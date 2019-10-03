@@ -1,0 +1,39 @@
+{
+    "name": "txio",
+    "version": "0.0.1",
+    "description": "socket.io server for Transifex",
+    "type": "module",
+    "scripts": {
+        "start": "NODE_PATH=dist/ node ./dist/server/index.js",
+        "start-dev": "NODE_PATH=src/ nodemon --exec babel-node ./src/server/index.js",
+        "build-server": "babel -d ./dist/server ./src/server -s",
+        "build-client": "webpack",
+        "build": "npm run build-server && npm run build-client",
+        "test": "NODE_PATH=src/ nyc mocha --require @babel/register --exit 'tests/**/*.js'"
+    },
+    "dependencies": {
+        "core-js": "^3.2.1",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "nconf": "^0.10.0",
+        "socket.io": "^2.2.0",
+        "socket.io-client": "^2.3.0",
+        "socket.io-redis": "^5.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.2",
+        "@babel/core": "^7.6.2",
+        "@babel/node": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "@babel/register": "^7.6.2",
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "css-loader": "^3.2.0",
+        "mocha": "^6.2.1",
+        "nodemon": "^1.19.3",
+        "nyc": "^14.1.1",
+        "style-loader": "^1.0.0",
+        "webpack": "^4.41.0",
+        "webpack-cli": "^3.3.9"
+    }
+}

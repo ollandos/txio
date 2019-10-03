@@ -1,0 +1,59 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.section {
+  padding: 10px;
+  flex: 1;
+  overflow: auto;
+  border: 1px solid gray;
+}
+
+.form-row {
+  display: flex;
+  margin: 15px 0;
+}
+
+.form-label {
+  flex: 1;
+}
+
+.form-field {
+  flex: 3;
+}
+
+.form-button {
+  flex: 1;
+}
+
+.form-field input {
+  width: 340px;
+}
+
+.form-field textarea {
+  width: 353px;
+  height: 80px;
+}
+
+#api-log {
+  font-size: 0.7em;
+}
+
+.message-list li {
+  display: flex;
+  margin: 10px 0;
+}
+
+.message {
+  flex: 2;
+}
+
+.message-info {
+  flex: 1;
+  font-size: 0.7em;
+}

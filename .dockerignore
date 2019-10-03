@@ -3,5 +3,6 @@ node_modules/*
 dist/*
 tags
 .envrc
-docker-compose.override.yml
+.git/*
+docker-compose.*
 .nyc_output/*

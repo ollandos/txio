@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="section">
+        <h1>Room management</h1>
+        <form id="room-form">
+          <div class="form-row">
+            <div class="form-field">
+              <input name="room" placeholder="Room ID" />
+            </div>
+            <div class="form-button">
+              <input type="submit" value="Join" />
+            </div>
+          </div>
+        </form>
+        <ul id="room-list"></ul>
+      </div>
+
+      <div class="section">
+        <h1>API playground</h1>
+        <form id="api-form">
+          <div class="form-row">
+            <div class="form-label">Room:</div>
+            <div class="form-field"><input name="room" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-label">Payload:</div>
+            <div class="form-field">
+              <textarea name="message"></textarea>
+            </div>
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+
+        <h2>Log <button id="api-log-clear">clear</button></h2>
+        <ul id="api-log">
+        </ul>
+      </div>
+
+      <div class="section">
+        <h1>Received messages <button id="messages-clear">clear</button></h1>
+        <p>My socket ID: <span id="socket-id"></span></p>
+        <ul class="message-list" id="message-list"></ul>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

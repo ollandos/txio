@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  txio_redis:
+    image: redis:alpine
+
+  txio_web:
+    image: txio_web:latest
