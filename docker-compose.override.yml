@@ -1,0 +1,20 @@
+## Copy this file as `docker-compose.override.yml` for development
+
+version: "3.7"
+services:
+  txio_dev:
+    volumes:
+      - ./:/usr/app
+    ports:
+      - "127.0.0.1:3005:3005"
+
+  txio_prod:
+    ports:
+        - "127.0.0.1:3005:3005"
+
+  txio_ci:
+    volumes:
+      - ./:/usr/app
+  # txio_redis:
+  #   ports:
+  #     - "127.0.0.1:6379:6379"

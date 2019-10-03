@@ -1,0 +1,8 @@
+node_modules/*
+.vscode/*
+dist/*
+tags
+.envrc
+.git/*
+docker-compose.*
+.nyc_output/*

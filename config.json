@@ -1,0 +1,8 @@
+{
+    "redisHost": "txio_redis",
+    "redisPort": 6379,
+    "jwtCert": "%^KaTFfM#b08aMl",
+    "debug": true,
+    "useApiAuth": false,
+    "useRedisAdapter": true
+}
