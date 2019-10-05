@@ -7,14 +7,13 @@ import nconf from 'server/config';
  */
 
 export default (req, res, next) => {
-  try {
-    const header = req.headers["authorization"];
-    const token = header.split(" ")[1];
-    jwt.verify(token, nconf.get('jwtCert'), (err, payload) => {
-        next();
-    });
-  } catch (error) {
-    res.statusCode = 403;
-    res.send('Forbidden');
-  }
+  const header = req.headers['authorization'];
+  const token = header.split(' ')[1];
+  jwt.verify(token, nconf.get('jwtCert'), (err, payload) => {
+    if (err) {
+      res.statusCode = 403;
+      res.send('Forbidden');
+    }
+    next();
+  });
 };

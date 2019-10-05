@@ -4,4 +4,4 @@ services:
     image: redis:alpine
 
   txio_web:
-    image: txio_web:latest
+    image: txio_dev:latest

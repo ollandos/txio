@@ -1,7 +1,7 @@
 GROUP_ID?=$$(if [ $$(id -g) = '20' ]; then echo 1111; else id -g; fi)
 USER_ID?=$$(id -u)
 
-TARGET_IMAGE=production
+TARGET_IMAGE=txio_dev
 TARGET_TAG=latest
 
 build:

@@ -21,17 +21,18 @@ USER node
 COPY --chown=node:node package.json package-lock.json ./
 
 
-#####################
-### builder image ###
-FROM base as dev
+#########################
+### builder/dev image ###
+FROM base as txio_dev
 RUN npm ci
 COPY --chown=node:node . .
 RUN npm run build
+CMD ["npm", "run", "start-dev"]
 
 
 ########################
 ### production image ###
-FROM base as production
+FROM base as txio_prod
 RUN npm ci --only=prod
 COPY --from=dev /usr/app/dist ./dist
 CMD ["npm", "start"]

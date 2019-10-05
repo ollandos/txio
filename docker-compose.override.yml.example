@@ -4,11 +4,9 @@ version: "3.7"
 services:
   txio_web:
     volumes:
-      - .:/user/app
+      - ./:/usr/app
     ports:
       - "127.0.0.1:3005:3005"
-    environment:
-      - NODE_ENV=development
 
   # txio_redis:
   #   ports:
