@@ -2,6 +2,7 @@
 
 version: "3.7"
 services:
+
   txio_dev:
     volumes:
       - ./:/usr/app
@@ -15,6 +16,7 @@ services:
   txio_ci:
     volumes:
       - ./:/usr/app
+
   # txio_redis:
   #   ports:
   #     - "127.0.0.1:6379:6379"
