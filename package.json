@@ -23,7 +23,7 @@
         "jsonwebtoken": "^8.5.1",
         "nconf": "^0.10.0",
         "regenerator-runtime": "^0.13.3",
-        "socket.io": "^2.2.0",
+        "socket.io": "^2.5.0",
         "socket.io-redis": "^5.2.0"
     },
     "devDependencies": {
