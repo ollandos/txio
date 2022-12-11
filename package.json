@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "core-js": "^3.2.1",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "jsonwebtoken": "^8.5.1",
         "nconf": "^0.10.0",
         "regenerator-runtime": "^0.13.3",
